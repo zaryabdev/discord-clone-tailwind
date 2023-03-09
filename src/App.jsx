@@ -1,9 +1,17 @@
 import { useState } from "react";
+import ReactDOM from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
-import reactLogo from "./assets/react.svg";
+import Message from "./components/Message";
+const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <Message />,
+    },
+]);
 
 function App() {
-    return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+    return <RouterProvider router={router} />;
 }
 
 export default App;

@@ -3,10 +3,12 @@ import React from "react";
 function Layout() {
     return (
         <div className="flex text-white  h-screen">
-            <div className="bg-gray-800 p-4">
-                <div className="bg-white w-12 h-12 flex justify-center items-center text-gray-500 rounded-full">
-                    TW
-                </div>
+            <div className="bg-gray-800 p-3 space-y-2 overflow-y-scroll">
+                {[...Array(30)].map((_, i) => (
+                    <div className="bg-white w-12 h-12 flex justify-center items-center text-gray-500 rounded-full">
+                        {i}
+                    </div>
+                ))}
             </div>
             <div className="bg-gray-700 w-60 flex flex-col">
                 <div className="p-4 shadow-md">Tailwind CSS</div>
